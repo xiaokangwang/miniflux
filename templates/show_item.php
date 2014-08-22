@@ -1,3 +1,6 @@
+<?php
+require __DIR__.'/../lib/imageproxy.php'
+?>
 <?php if (empty($item)): ?>
     <p class="alert alert-info"><?= t('Item not found') ?></p>
 <?php else: ?>
@@ -107,7 +110,7 @@
             </div>
             <?php endif ?>
 
-            <?= $item['content'] ?>
+            <?= KKDEV_parse($item) ?>
         </div>
 
         <?php if (isset($item_nav)): ?>
